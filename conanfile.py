@@ -9,7 +9,7 @@ class V8Conan(ConanFile):
     settings = "os", "compiler", "build_type", "arch"
 
     def package(self):
-        self.copy("*.h", dst="include", keep_path=True)
+        self.copy("*.h", dst=".", keep_path=True)
         self.copy("*.so", dst="lib", keep_path=False)
         self.copy("*.bin", dst=".", keep_path=False)
 
