@@ -7,9 +7,6 @@ class V8Conan(ConanFile):
     url = "https://github.com/quaternion7/conan-v8"
     description = "Conan recipe for embedding Google's V8 Javascript Engine."
     settings = "os", "compiler", "build_type", "arch"
-    options = {"shared": [True, False]}
-    default_options = "shared=True"
-    generators = "cmake"
 
     def package(self):
         self.copy("*.h", dst="include", keep_path=True)
