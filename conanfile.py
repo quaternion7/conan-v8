@@ -14,4 +14,5 @@ class V8Conan(ConanFile):
         self.copy("*.bin", dst=".", keep_path=False)
 
     def package_info(self):
-        self.cpp_info.libs = self.collect_libs()
+        self.cpp_info.libs = ["v8"]
+        #self.cpp_info.libs = self.collect_libs(self)
