@@ -11,7 +11,7 @@ class V8Conan(ConanFile):
     def package(self):
         self.copy("*.h", dst=".", keep_path=True)
         self.copy("*.a", dst="lib", keep_path=False)
-        self.copy("*.so*", dst="lib", keep_path=False)
+        self.copy("*.so", dst="lib", keep_path=False)
         self.copy("*.bin", dst=".", keep_path=False)
 
     def package_info(self):
